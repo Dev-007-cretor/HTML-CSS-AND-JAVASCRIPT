@@ -1,58 +1,92 @@
-*{
-    background-color: aqua;
+:root {
+  --primary-bg: #e0f7fa;
+  --box-bg: #ffffff;
+  --primary-btn: #007bff;
+  --btn-text: #ffffff;
+  --font-large: 8vmin;
+  --font-medium: 4vmin;
+  --btn-radius: 25px;
 }
-h1{
-    text-align: center;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--primary-bg);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.id{
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+h1 {
+  text-align: center;
+  margin-top: 3vh;
+  font-size: 5vmin;
+  color: #004d40;
 }
-.boxes{
-    width: 60vh;
-    height: 70vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap:1vmin;
-    
+
+.id {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.box{
-    justify-content: center;
-    background-color: white;
-    border-radius: 25px;
-    height: 18vmin;
-    width: 18vmin;
-    font-size: 8vmin;
-    
+
+.boxes {
+  width: 90vw;
+  max-width: 600px;
+  height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2vmin;
+  margin: auto;
 }
-.new_game{
-    width: 30vh;
-    margin-left: 85vh;
-    border-radius: 25px;
-    align-items: center;
-    background-color: blue;
-    border-style: dashed;
-    color: white;
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--box-bg);
+  border-radius: var(--btn-radius);
+  height: 18vmin;
+  width: 18vmin;
+  font-size: var(--font-large);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.restart_game{
-    width: 30vh;
-    margin-left: 85vh;
-    margin-top: 5vh;
-    border-radius: 25px;
-    align-items: center;
-    background-color: blue;
-    border-style: dashed;
-    color: white;
+
+.box:hover {
+  transform: scale(1.05);
+  background-color: #f0f0f0;
 }
-#message{
-    color: white;
-    margin-left: 95vh;
-    font-size: 4vmin;
+
+button {
+  width: 200px;
+  padding: 1vh;
+  border-radius: var(--btn-radius);
+  background-color: var(--primary-btn);
+  border: none;
+  color: var(--btn-text);
+  font-size: var(--font-medium);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 2vh auto;
+  display: block;
 }
-.hide{
-    display:none;
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+#message {
+  color: #004d40;
+  text-align: center;
+  font-size: var(--font-medium);
+  margin-top: 2vh;
+}
+
+.hide {
+  display: none;
 }
